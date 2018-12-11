@@ -56,10 +56,6 @@ public struct OktaAuthorization {
         })
     }
 
-    func passwordFlow(_ config: [String: String], credentials: [String: String]?, _ view: UIViewController) -> Promise<OktaTokenManager> {
-        return buildAndPerformTokenRequest(config, additionalParams: credentials)
-    }
-
     func refreshTokensManually(_ config: [String: String], refreshToken: String) -> Promise<OktaTokenManager> {
         return buildAndPerformTokenRequest(config, refreshToken: refreshToken)
     }

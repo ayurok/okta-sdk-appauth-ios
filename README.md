@@ -122,20 +122,6 @@ OktaAuth.login().start(view: self)
 }
 ```
 
-To login using `username` and `password`:
-
-```swift
-OktaAuth.login(username: "user@example.com", password: "password").start(view: self)
-.then { tokenManager in
-    // tokenManager.accessToken
-    // tokenManager.idToken
-    // tokenManager.refreshToken
-}
-.catch { error in
-    // Error
-}
-```
-
 ### Handle the Authentication State
 
 Returns `true` if there is a valid access token stored in the TokenManager. This is the best way to determine if a user has successfully authenticated into your app.
